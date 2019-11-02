@@ -4,6 +4,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    current_user
   end
 end
