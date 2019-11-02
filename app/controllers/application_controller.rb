@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def welcome
-    render 'layouts/application'
+    render 'welcome'
   end
 
   def current_user
