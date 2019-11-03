@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @user = current_user
 
     if current_user
-      session[:id] = @user.id
+      session[:user_id] = @user.id
       redirect_to '/'
     else
       render "session/new"
