@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
-        <% current_user %>
+        <% if current_user %>
           <a href="/signout">Signout</a>
         <% else %>
           <a href="/signup">Signup</a>
