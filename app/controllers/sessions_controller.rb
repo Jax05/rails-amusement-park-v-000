@@ -4,9 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    current_user
+    @user = current_user
 
-    raise params
+    if current_user
+      session[:id] = @user.id
+      redirect_to '/'
+    else
+      render "user/new"
+    end
   end
 
   def destroy
