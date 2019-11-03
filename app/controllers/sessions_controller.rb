@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    current_user
+    @user = current_user
   end
 
   def destroy
