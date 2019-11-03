@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  validates :name, :happiness, :nausea, :height, :tickets, presence: true
+  validates :name, presence: true
   has_secure_password
 
   def mood
