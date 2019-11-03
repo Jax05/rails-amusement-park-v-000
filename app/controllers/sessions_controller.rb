@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     current_user
   end
 
-  def delete
+  def destroy
     current_user = nil
   end
 end
