@@ -22,7 +22,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <% if current_user %>
-              <a class="nav-link" href="/signout">Signout</a>
+              <li class="nav-item">
+                <a class="nav-link" href="/signout">Signout</a>
+              </li>
             <% else %>
               <a class="nav-link" href="/signup">Signup</a>
               <a class="nav-link" href="/signin">Signin</a>
