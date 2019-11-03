@@ -5,6 +5,8 @@ class SessionsController < ApplicationController
 
   def create
     @user = current_user
+
+    raise @user.params
   end
 
   def destroy
