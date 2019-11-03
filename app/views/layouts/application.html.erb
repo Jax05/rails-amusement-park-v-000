@@ -23,7 +23,7 @@
           <ul class="nav navbar-nav">
             <% if current_user %>
               <li class="nav-item">
-                <a class="nav-link" href="/signout">Signout</a>
+                <a class="nav-link" href="<%= url_to([:delete, @user]) %>">Signout</a>
               </li>
             <% else %>
               <li class="nav-item">
