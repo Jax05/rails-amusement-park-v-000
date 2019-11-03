@@ -3,6 +3,14 @@ class User < ActiveRecord::Base
   has_secure_password
 
   def mood
-    self.nausea > self.happiness ? "sad" : "happy"
+    if self.has_attributes?
+      self.nausea > self.happiness ? "sad" : "happy"
+    else
+      "unavailable"
+    end
+  end
+
+  def has_attributes?
+    self.nausea && self.happiness
   end
 end
