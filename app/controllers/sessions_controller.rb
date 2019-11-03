@@ -6,4 +6,8 @@ class SessionsController < ApplicationController
   def create
     current_user
   end
+
+  def delete
+    current_user = nil
+  end
 end
