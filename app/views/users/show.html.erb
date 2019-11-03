@@ -1,10 +1,6 @@
-<h1><%= @user.name %></h1>
-
-<ul>
-  <li>Mood: <%= @user.mood %></li>
-  <li>Tickets: <%= @user.tickets %></li>
-  <li>Height: <%= @user.height %></li>
-  <% if @user.admin %>
-    <li>ADMIN</li>
-  <% end %>
-</ul>
+<p><strong><%= "ADMIN" if @user.admin %></p>
+<h2><%= @user.name %></h2>
+<h3>Mood: <%= @user.mood %></h3>
+<h3>Height: <%= @user.height %></h3>
+<h3>Tickets: <%= @user.tickets %></h3>
+<a href="/attractions">See attractions</a>
