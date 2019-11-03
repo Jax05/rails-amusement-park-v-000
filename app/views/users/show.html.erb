@@ -4,4 +4,7 @@
   <li>Mood: <%= @user.mood %></li>
   <li>Tickets: <%= @user.tickets %></li>
   <li>Height: <%= @user.height %></li>
+  <li>Is Admin: <%= @user.admin %></li>
 </ul>
+
+<%= link_to 'Edit', edit_user_path(@user) %>
