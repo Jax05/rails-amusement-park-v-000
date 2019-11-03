@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    current_user
 
-    raise @user.params
+    raise params
   end
 
   def destroy
