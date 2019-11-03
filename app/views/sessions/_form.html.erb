@@ -1,9 +1,10 @@
-<h1>Signin</h1>
+<h1>Sign In</h1>
 
-<%= form_tag '/signin' do %>
+<%= form_for(:session, url: signin_url) do |f| %>
+  <%= f.label :name %>
+  <%= f.collection_select :name, User.all, :id, :name, {}, {id: "user_name", name: 'user[name]'} %>
 
-  Name: <%= text_field_tag :name %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
-
+  <%= f.label :password %>
+  <%= f.password_field :password, id: "password" %><br>
+  <%= f.submit value: "Sign In" %>
 <% end %>
