@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    @user = User.new
 
-    if current_user
+    if @user
       session[:user_id] = @user.id
       redirect_to '/'
     else
