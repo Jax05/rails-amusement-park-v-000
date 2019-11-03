@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_id(params[:id])
+    @user = User.find_by_id(params[:user][:id])
 
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
